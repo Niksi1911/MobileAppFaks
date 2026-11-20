@@ -7,67 +7,56 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textViewMessage"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/editTextFirstNumber"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:text="Rezultat"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="36dp"
+        android:hint="Prvi broj"
+        android:inputType="numberDecimal|numberSigned"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.351"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerOperator"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="32dp"
+        android:entries="@array/operators"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextFirstNumber" />
+
+    <EditText
+        android:id="@+id/editTextSecondNumber"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:hint="Drugi broj"
+        android:inputType="numberDecimal|numberSigned"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.351"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerOperator" />
 
     <Button
         android:id="@+id/buttonCalculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Calculate"
-        app:layout_constraintTop_toBottomOf="@id/textViewMessage"
+        android:layout_marginTop="32dp"
+        android:text="Izračunaj"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextFirstNumber"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:hint="Prvi broj"
-        android:inputType="numberDecimal|numberSigned"
-        app:layout_constraintTop_toBottomOf="@id/buttonCalculate"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-
-    <EditText
-        android:id="@+id/editTextOperator"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:hint="Operator (+ - * /)"
-        android:inputType="text"
-        app:layout_constraintTop_toBottomOf="@id/editTextFirstNumber"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-
-    <EditText
-        android:id="@+id/editTextSecondNumber"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:hint="Drugi broj"
-        android:inputType="numberDecimal|numberSigned"
-        app:layout_constraintTop_toBottomOf="@id/editTextOperator"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-
+        app:layout_constraintTop_toBottomOf="@+id/editTextSecondNumber" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
